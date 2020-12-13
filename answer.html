@@ -96,15 +96,15 @@
     async function sendMsg() {
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
-          {
-            "type": "sticker",
-            "stickerId": 1,
-            "packageId": 1
-          }
-          {
-            type : "text", 
-            text : userId
-          }
+    {
+		  type: 'image',
+		  originalContentUrl: 'https://' + document.domain + '/imgs/' + res + '.jpg',
+		  previewImageUrl: 'https://' + document.domain + '/imgs/' + res + '_240.jpg'
+		},
+		{
+		  type: 'text',
+		  text: 'From:' + profile.displayName
+		}
         ])
         alert("Message sent")
       }
