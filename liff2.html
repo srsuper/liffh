@@ -40,7 +40,7 @@
   <p id="displayName"></p>
   <p id="statusMessage"></p>
  <p1w id="getDecodedIDToken"></p1w>
-  <input type="button" class="button" value="..ฉันอยู่ นี่..">
+  <input type="button" class="button"  onclick="sendMsg()" value="..ฉันอยู่ นี่..">
 
   <script src="https://static.line-scdn.net/liff/edge/versions/2.6.0/sdk.js"></script>
   <script>
@@ -60,6 +60,33 @@
         liff.login();
       }
     }, err => console.error(err.code, error.message));
+      async function scanCode() {
+      const result = await liff.scanCode()
+      document.getElementById("scanCode").append(result.value)
+    }
+        async function sendMsg() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "sticker",
+            "stickerId": 1,
+            "packageId": 1
+          },
+          "type":"text",
+          "text": profile.displayName
+        ])
+        alert("Message sent")
+      }
+    }
+        function getContext() {
+      if (liff.getContext() != null) {
+        document.getElementById("type").append(liff.getContext().type)
+        document.getElementById("viewType").append(liff.getContext().viewType)
+        document.getElementById("utouId").append(liff.getContext().utouId)
+        document.getElementById("roomId").append(liff.getContext().roomId)
+        document.getElementById("groupId").append(liff.getContext().groupId)
+      }
+    }
   </script>
 
 </body>
