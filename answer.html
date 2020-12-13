@@ -96,10 +96,7 @@
     async function sendMsg() {
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
-    {
-      type: "text",
-		  text: "From:"
-		},
+
 		{
 		  type: "text",
 		  text: "From:" + profile.displayName
