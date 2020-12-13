@@ -97,13 +97,12 @@
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
     {
-		  type: 'image',
-		  originalContentUrl: 'https://' + document.domain + '/imgs/' + res + '.jpg',
-		  previewImageUrl: 'https://' + document.domain + '/imgs/' + res + '_240.jpg'
+      type: "text",
+		  text: "From:"
 		},
 		{
-		  type: 'text',
-		  text: 'From:' + profile.displayName
+		  type: "text",
+		  text: "From:" + profile.displayName
 		}
         ])
         alert("Message sent")
