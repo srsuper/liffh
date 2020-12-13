@@ -60,8 +60,8 @@
       liff.getProfile().then(profile => {
         document.getElementById("pictureUrl").src = profile.pictureUrl;
         document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
-        document.getElementById("displayName").innerHTML = '<b>DisplayName:</b><br /> ' + profile.displayName;
-        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage</b><br /> ' + profile.statusMessage;
+        document.getElementById("displayName").innerHTML = '<b>DisplayName</b><br /> ' + profile.displayName;
+        document.getElementById("statusMessage").innerHTML = '<b>ข้อความ สถานะ</b><br /> ' + profile.statusMessage;
         document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
       }).catch(err => console.error(err));
     }
