@@ -12,6 +12,19 @@
   text-shadow: 2px 2px 4px #000000;
 }
     #pictureUrl { display: block; margin: 0 auto }
+    p1w { color: white; }
+    .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -20,6 +33,7 @@
   <p id="displayName"></p>
   <p id="statusMessage"></p>
   <p id="getDecodedIDToken"></p>
+  <input type="button" class="button" value="Input Button">
   <script src="https://static.line-scdn.net/liff/edge/versions/2.6.0/sdk.js"></script>
   <script>
     function runApp() {
