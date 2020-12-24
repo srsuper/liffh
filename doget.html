@@ -1,18 +1,20 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Testing</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>
-         $(function(){
-            var url='https://script.google.com/macros/s/AKfycbz4gXpkJN_zG50u8PuCAHgqb1_XqMzs1pAswsCrwWUy3YwGTLk/exec?range=A1:BI48';
-            $.get(url,function(data,status){
-                document.getElementById('spn1').innerHTML=data;
-            });
-        });
-            console.log('MyCode');
-        </script>
-     </head>
-     <body>
-        <div id="mydata">The size of my ruler is <span id="spn1"></span> inches.</div>
-     </body> 
+<head>
+    <title>onClick Demo</title>
+</head>
+<body>
+<script>
+function toggleImage() {
+   var img1 = "http://placehold.it/350x150";
+   var img2 = "http://placehold.it/200x200";
+
+   var imgElement = document.getElementById('toggleImage');
+
+   imgElement.src = (imgElement.src === img1)? img2 : img1;
+}
+</script>
+<img src="http://placehold.it/350x150" id="toggleImage" onclick="toggleImage();"/>
+
+</body>
 </html>
