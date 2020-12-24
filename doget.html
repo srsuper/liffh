@@ -19,6 +19,14 @@
     <p id="displayName"><b>displayName: </b></p>
     <p id="statusMessage"><b>statusMessage: </b></p>
     <p id="decodedIDToken"><b>email2: </b></p>
+    <button id="btnMsg" onclick="sendMsg()">Send Message</button>
+    <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
+    <button onclick="openWindow()">Open Window</button>
+    <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
+    <button id="btnLogOut" onclick="logout()">Log Out</button>
+    <button id="btnClose" onclick="closeWindow()">Close</button>
+
+    
 <script>
     document.write(
         '<link rel="stylesheet" href="css/style.css?cache='${new Date().getTime()}'" media="all">'
